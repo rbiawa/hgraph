@@ -48,11 +48,11 @@ If you use this source code, please cite article:
 - `in`: folder containing all the input data files.
   - `events.parquet`: data set  (in [parquet](https://en.wikipedia.org/wiki/Apache_Parquet) format) of listings viewed by online searchers. Each line is a combination of a user with a listing. This table contains colums : `fullvisitorid` (user ID); `id_listing` (listing ID); `datetime` (date and time of view);  `visitid` (view ID in the data set);  `is_logged` (indication of wether the user was logged while viewing the listing).
   - `features.parquet`: data set (in [parquet](https://en.wikipedia.org/wiki/Apache_Parquet) of every single listings' features. This table contains colums : `id_listing` (listing ID); `price` (property price); `area` (property area); `room_count` (property room count); `fct_room_count` (property room count set to factor variable); `sqm_price` (property square meter price); `item_type` (property type, wether a house or appartment);
-  - `mail_phone.parquet`: a data set (in [parquet](https://en.wikipedia.org/wiki/Apache_Parquet) format) of contact indicators. Each line is a combination of a user with a listing. This table contains colums : `fullvisitorid` (user ID); `id_listing` (listing ID); `datetime` (date and time of view); `visitid` (view ID in the data set); `event_action` (indication of the contact action a user made : displaying a phone number or submiting a mail form); `is_logged` (indication of wether the user was logged while viewing the listing).
   - `geom_sf_cities.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing cities' limits.
   - `geom_sf_departements.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing departements' limits. In the French context, departments correspond to the NUTS 3 level of the EU territorial classification system, which is an administrative unit with populations ranging from 150,000 to 800,000 inhabitants [[Eu'26](#references)].
 - `out`: folder containing the outputs of the processing.
   - `pdf`: pdf files with the plots of the processing.
+  - `png`: png files with the plots of the processing.
   - `Rdata`: Rdata files containing `R`objects such as dataframes.
   - `svg`: svg files with the plots of the processing.
   - `tex`: tex files (output in [Latex](https://fr.wikipedia.org/wiki/LaTeX) format) with the tables produced by the processing and provided in the document.
@@ -322,47 +322,33 @@ sessioninfo::session_info(pkgs, dependencies = FALSE)
 *NUTS — Nomenclature des unités territoriales statistiques: Principes.*  
 URL: https://ec.europa.eu/eurostat/fr/web/nuts/principles
 
-* **[Hu'20]** **Hurlbert, S. H.** (1971).  
-*The nonconcept of species diversity.*  
-Ecology, 52(4), 577–586.  
-DOI: https://doi.org/10.2307/1934145
+* **[Ba'04]** **Barrat, A., M. Barthelemy, R. Pastor-Satorras, and A. Vespignani.** (2004).
+*The Architecture of Complex Weighted Networks.* Proceedings of the National Academy of Sciences 101 (11): 3747–52. https://doi.org/10.1073/pnas.0400087101.
 
-* **[Mc'77]** **McFadden, D.** (1977).  
-*Quantitative Methods for Analyzing Travel Behaviour of Individuals.*  
-Cowles Foundation Discussion Paper 707.  
-URL: https://elischolar.library.yale.edu/cowles-discussion-paper-series/707
+* **[Ba'15]** **Bates, D., M. Mächler, B. Bolker, and S. Walker.** (2015).
+*Fitting Linear Mixed-Effects Models Using lme4.* Journal of Statistical Software 67 (1): 1–48. https://doi.org/10.18637/jss.v067.i01.
 
+* **[Br'96]** **Brunsdon, C., A. S. Fotheringham, and M. E. Charlton.** (1996).
+*Geographically Weighted Regression: A Method for Exploring Spatial Nonstationarity.* Geographical Analysis 28 (4): 281–98.
 
-* **[Ok'24]** **Oksanen, J., et al.** (2024).  
-*vegan: Community Ecology Package.*  
-R package version 2.6-8.  
-URL: https://CRAN.R-project.org/package=vegan
+* **[Cs'04]** **Csárdi, G., K. Nepusz T.and Müller, S. Horvát, V. Traag, F. Zanini, and D. Noom.** (2023).
+*Igraph for r: R Interface of the Igraph Library for Graph Theory and Network Analysis.* Zenodo, ahead of print. https://doi.org/10.5281/zenodo.7682609.
 
-* **[Ma'04]** **Pagès, J.** (2004).  
-*Analyse factorielle de données mixtes.*  
-Revue de statistique appliquée, 52(4), 93–111.
+* **[Fa'14]** **Farine, D.R.** (2014).
+*Measuring Phenotypic Assortment in Animal Social Networks: Weighted Associations Are More Robust Than Binary Edges.* Animal Behaviour 89: 141–53. https://doi.org/10.1016/j.anbehav.2014.01.001.
 
+* **[Mu'20]** **Murakami, D., N. Tsutsumida, T. Yoshida, T. Nakaya, and B. Lu.** (2020).
+*Scalable GWR: A Linear-Time Algorithm for Large-Scale Geographically Weighted Regression with Polynomial Kernels.* Annals of the American Association of Geographers 111 (2): 459–80. https://doi.org/10.1080/24694452.2020.1774350.
 
-* **[Pa'25]** **Pannu, A., & El-Saeiti, I. N.** (2025).  
-*valuating predictive accuracy and model selection in logistic regression: a
-statistical approach using sensitivity, specificity, and ROC analysis.*  
-International Journal of Management, 16(1).  
-DOI: https://doi.org/10.34218/IJM_16_01_002
+* **[Na'17]** **Nakagawa, S., P. C. D. Johnson, and H. Schielzeth.** (2017).
+*The Coefficient of Determination R2 and Intra-Class Correlation Coefficient from Generalized Linear Mixed-Effects Models Revisited and Expanded.* Journal of the Royal Society Interface 14 (134): 20170213. https://doi.org/10.1098/rsif.2017.0213.
+
+* **[Ne'03]** **Newman, M. E. J.** (2003).
+*Mixing Patterns in Networks.* Physical Review E 67 (February): 026126. https://doi.org/10.1103/PhysRevE.67.026126.
 
 
-
-* **[Ro'87]** **Rousseeuw, P. J.** (1987).  
-*Silhouettes: a graphical aid to the interpretation and validation of cluster analysis.*  
-Journal of Computational and Applied Mathematics, 53–65.  
-DOI: https://doi.org/10.1016/0377-0427(87)90125-7
-
-* **[Si'49]** **Simpson, E. H.** (1949).  
-*Measurement of diversity.*  
-Nature, 163(4148), 688.  
-DOI: https://doi.org/10.1038/163688a0
+* **[Ba'04]** **Traag, V. A., L. Waltman, and N. J. Van Eck.** (2019).
+*From Louvain to Leiden: Guaranteeing Well-Connected Communities.* Scientific Reports 9 (1): 5233. https://doi.org/10.1038/s41598-019-41695-z.
 
 
-* **[Zo'07]** **Zou, K. H., O’Malley, A. J., & Mauri, L.** (2007).  
-*Receiver-operating characteristic analysis for evaluating diagnostic tests and predictive models.*  
-Circulation, 115(5), 654–657.  
-DOI: https://doi.org/10.1161/CIRCULATIONAHA.105.594929
+
