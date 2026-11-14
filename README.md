@@ -56,7 +56,6 @@ If you use this source code, please cite article:
   - `Rdata`: Rdata files containing `R`objects such as dataframes.
   - `svg`: svg files with the plots of the processing.
   - `tex`: tex files (output in [Latex](https://fr.wikipedia.org/wiki/LaTeX) format) with the tables produced by the processing and provided in the document.
-  - `parquet`: forlder containing output data sets (in [parquet](https://en.wikipedia.org/wiki/Apache_Parquet). For example, the output data set of 'Serious and non serious users'.
   - `CSV`: forlder containing output data sets in [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) format.
 - `src`: folder containing the source code.
   - `plot`: folder containing `R` scripts for plots.
