@@ -98,7 +98,7 @@ Unfortunately, we are not allowed to publish the data used in this paper. Howeve
 #### Processing
 Once the data set is ready, do the following to apply the process described in the paper to these data: Run the `main.R` script using `source("main.R")`.
 
-**Note** : [Rstudio](https://docs.posit.co/ide/user/)  user may first run `Serious_search_identification.Rproj` file to work under the project. For example, this will automatically set the working directory. But this is not necessary.
+**Note**: [Rstudio](https://docs.posit.co/ide/user/)  user may first run `Serious_search_identification.Rproj` file to work under the project. For example, this will automatically set the working directory. But this is not necessary.
 
 
 ### To Apply the Paper Process to Custom Data
