@@ -67,7 +67,6 @@ If you use this source code, please cite article:
   - `statistics`: folder containing `R` scripts for statistic functions.
   - `visualization`: folder containing `R` scripts for visualization parameters.
   - `function_retrieving.R` : `R` scripts to load function scripts.
-  - `create_directories.R` : `R` scripts to create directories.
   - `load_data.R`: `R` script to load data.
   - `packages_loading.R` : `R` script to install (if not ye installed) and load the packages used in this work, along with customer functions.
   - `processing_functions.R`: `R` scripts for data processing ad hoc functions.
