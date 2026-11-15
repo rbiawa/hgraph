@@ -58,19 +58,15 @@ If you use this source code, please cite article:
   - `tex`: tex files (output in [Latex](https://fr.wikipedia.org/wiki/LaTeX) format) with the tables produced by the processing and provided in the document.
   - `CSV`: forlder containing output data sets in [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) format.
 - `src`: folder containing the source code.
+  - `clustering`: folder containing `R` scripts for clustering functions.
+  - `descriptive_statistics`: folder containing `R` scripts for descriptive statistics.
+  - `execution`: folder containing `R` scripts for processing execution.
+  - `modeling`: folder containing `R` scripts for price modeling (GWR and multilevel).
   - `plot`: folder containing `R` scripts for plots.
-    - `map_plot.R`: `R` script to plot Online search intensity by city.
-    - `sample_search_cluster_plot.R`: `R` script to plot serious search graphics.
-    - `save_tables.R`: `R` script to save tables in tex format.
-    - `serious_search_pdf_plot.R`: `R`script to save graphics in pdf format.
-    - `serious_searcher_svg_plots.R`: `R`script to save graphics in svg format.
-  - `serious_search`: folder containing `R` scripts for the analysis of serious search.
-    - `contact_indicators.R`: `R`script to compute contact indicators.
-    - `revisit_contact_temporality.R`: `R`script to analyze behavioural temporality between Revist and Contact.
-    - `revisit_contact_temporality.R`: `R`script to analyze the revisiting temporality.
-    - `serious_search_through_revisit.R`: `R`script to compute listings' revisit indicators and search variability indicators.
-    - `serious_search_through_revisit_analysis.R`: `R`script to analyze search engagement through listings' revisit indicators and search variability indicators.
-    - `serious_search_through_revisit_sample_analysis.R` : `R`script to analyze search engagement through listings' revisit indicators and search variability indicators on a sample of the online searchers.
+  - `processing`: folder containing `R` scripts for data processing.
+  - `statistics`: folder containing `R` scripts for statistic functions.
+  - `visualization`: folder containing `R` scripts for visualization parameters.
+  - `function_retrieving.R` : `R` scripts to load function scripts.
   - `create_directories.R` : `R` scripts to create directories.
   - `load_data.R`: `R` script to load data.
   - `packages_loading.R` : `R` script to install (if not ye installed) and load the packages used in this work, along with customer functions.
