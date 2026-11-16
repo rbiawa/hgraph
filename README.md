@@ -46,8 +46,8 @@ If you use this source code, please cite article:
 ## Organization
 
 - `in`: folder containing all the input data files.
-  - `events.parquet`: data set  (in [parquet](https://en.wikipedia.org/wiki/Apache_Parquet) format) of listings viewed by online searchers. Each line is a combination of a user with a listing. This table contains colums : `fullvisitorid` (user ID); `id_listing` (listing ID); `datetime` (date and time of view);  `visitid` (view ID in the data set);  `is_logged` (indication of wether the user was logged while viewing the listing).
-  - `features.parquet`: data set (in [parquet](https://en.wikipedia.org/wiki/Apache_Parquet) of every single listings' features. This table contains colums : `id_listing` (listing ID); `price` (property price); `area` (property area); `room_count` (property room count); `fct_room_count` (property room count set to factor variable); `sqm_price` (property square meter price); `item_type` (property type, wether a house or appartment);
+  - `events.parquet`: data set  (in [parquet](https://en.wikipedia.org/wiki/Apache_Parquet) format) of listings viewed by online searchers. Each line is a combination of a user with a listing. This table contains colums: `fullvisitorid` (user ID); `id_listing` (listing ID); `datetime` (date and time of view);  `visitid` (view ID in the data set);  `is_logged` (indication of wether the user was logged while viewing the listing).
+  - `features.parquet`: data set (in [parquet](https://en.wikipedia.org/wiki/Apache_Parquet) of every single listings' features. This table contains colums: `id_listing` (listing ID); `price` (property price); `area` (property area); `room_count` (property room count); `fct_room_count` (property room count set to factor variable); `sqm_price` (property square meter price); `item_type` (property type, wether a house or appartment);
   - `geom_sf_cities.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing cities' limits.
   - `geom_sf_departements.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing departements' limits. In the French context, departments correspond to the NUTS 3 level of the EU territorial classification system, which is an administrative unit with populations ranging from 150,000 to 800,000 inhabitants [[Eu'26](#references)].
 - `out`: folder containing the outputs of the processing.
@@ -66,10 +66,10 @@ If you use this source code, please cite article:
   - `processing`: folder containing `R` scripts for data processing.
   - `statistics`: folder containing `R` scripts for statistic functions.
   - `visualization`: folder containing `R` scripts for visualization parameters.
-  - `function_retrieving.R` : `R` scripts to load function scripts.
-  - `create_directories.R` : `R` scripts to create directories.
+  - `function_retrieving.R`: `R` scripts to load function scripts.
   - `load_data.R`: `R` script to load data.
-  - `packages_loading.R` : `R` script to install (if not ye installed) and load the packages used in this work, along with customer functions.
+  - `main_graph.R`: `R` script to install
+  - `packages_loading.R`: `R` script to install (if not yet installed) and load the packages used in this work, along with customer functions.
   - `processing_functions.R`: `R` scripts for data processing ad hoc functions.
   - `main.R`: the main `R` scripts to run the full processings.
   - `serious_search_through_revisit_along_with_contact_indicators.R`: Identify serious search with revisit and contact (phone number displaying and mail form submission) indicators.
@@ -79,7 +79,7 @@ If you use this source code, please cite article:
 ## Installation
 
 ### R and Packages
-To run this program you need to install the `R` language environment and the required packages :
+To run this program you need to install the `R` language environment and the required packages:
 1. install the [`R` language](https://cran.r-project.org/)
 2. Download this project from GitHub and unzip or clone it.
 3. Run `packages_loading.R` to install the required packages (this step is included in `main.R`; a minimal Internet connection is needed).
@@ -99,7 +99,7 @@ Unfortunately, we are not allowed to publish the data used in this paper. Howeve
 #### Processing
 Once the data set is ready, do the following to apply the process described in the paper to these data: Run the `main.R` script using `source("main.R")`.
 
-**Note** : [Rstudio](https://docs.posit.co/ide/user/)  user may first run `Serious_search_identification.Rproj` file to work under the project. For example, this will automatically set the working directory. But this is not necessary.
+**Note**: [Rstudio](https://docs.posit.co/ide/user/)  user may first run `Serious_search_identification.Rproj` file to work under the project. For example, this will automatically set the working directory. But this is not necessary.
 
 
 ### To Apply the Paper Process to Custom Data
