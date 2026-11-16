@@ -59,7 +59,6 @@ If you use this source code, please cite article:
   - `CSV`: forlder containing output data sets in [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) format.
 - `src`: folder containing the source code.
   - `clustering`: folder containing `R` scripts for clustering functions.
-  - `descriptive_statistics`: folder containing `R` scripts for descriptive statistics.
   - `execution`: folder containing `R` scripts for processing execution.
   - `modeling`: folder containing `R` scripts for price modeling (GWR and multilevel).
   - `plot`: folder containing `R` scripts for plots.
@@ -68,13 +67,8 @@ If you use this source code, please cite article:
   - `visualization`: folder containing `R` scripts for visualization parameters.
   - `function_retrieving.R`: `R` scripts to load function scripts.
   - `load_data.R`: `R` script to load data.
-  - `main_graph.R`: `R` script to install
   - `packages_loading.R`: `R` script to install (if not yet installed) and load the packages used in this work, along with customer functions.
-  - `processing_functions.R`: `R` scripts for data processing ad hoc functions.
   - `main.R`: the main `R` scripts to run the full processings.
-  - `serious_search_through_revisit_along_with_contact_indicators.R`: Identify serious search with revisit and contact (phone number displaying and mail form submission) indicators.
-  - `serious_search_through_revisit_without_contact_indicators.R`: Identify serious search with revisit only.
-- `Serious_search_identification.Rproj`: `R` projet file to run the projet.
 
 ## Installation
 
