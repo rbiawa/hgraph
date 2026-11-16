@@ -108,18 +108,6 @@ First, you need to set files `events.parquet`, `features.gpkg`, `geom_sf_cities.
   1. Copy your own `events.parquet`, `features.gpkg`, `geom_sf_cities.gpkg` and `geom_sf_departements.gpkg` in the `in` folder;
   2. Run the `main.R` script using `source("main.R")`. 
 
-##### Data Preparation
-First, you need to set files `events.parquet`, `features.gpkg`, `mail_phone.parquet`, `geom_sf_cities.gpkg` and `geom_sf_departements.gpkg`:
-  
-* `events.parquet`: data set  (in parquet format) of listings view by online searchers. Each line is a combination of a user with a listing. This table contains colums : `fullvisitorid` (user ID); `id_listing` (listing ID); `datetime` (date and time of view);  `visitid` (view ID in the data set); `is_logged` (indication of wether the user was logged while viewing the listing).
-* `features.gpkg`: data set (in gpkg format) of every single listings' features. This table contains colums : `id_listing` (listing ID); `price` (property price); `area` (property area); `room_count` (property room count); `fct_room_count` (property room count set to factor variable); `sqm_price` (property square meter price); `item_type` (property type, wether a house or appartment);
-* `geom_sf_cities.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing cities' limits. This table contains clomuns : `city_ID` (city ID), `dep_ID` (department ID), `reg_ID` (region ID),  `geom` (city geometry) 
-* `geom_sf_departements.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing departements' limits. This table contains clomuns :  `dep_ID` (department ID), `reg_ID` (region ID), `geom` (department geometry).
-
-
-#### Processing
-1. Copy your own `events.parquet`, `features.gpkg`, `geom_sf_cities.gpkg`, `geom_sf_departements.gpkg`, and possibly `mail_phone.parquet` in the `in` folder;
-2. Run the `main.R` script using `source("main.R")`. 
 
 ## Dependencies
 
