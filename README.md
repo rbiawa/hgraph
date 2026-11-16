@@ -93,46 +93,33 @@ Unfortunately, we are not allowed to publish the data used in this paper. Howeve
 #### Processing
 Once the data set is ready, do the following to apply the process described in the paper to these data: Run the `main.R` script using `source("main.R")`.
 
-**Note**: [Rstudio](https://docs.posit.co/ide/user/)  user may first run `Serious_search_identification.Rproj` file to work under the project. For example, this will automatically set the working directory. But this is not necessary.
-
 
 ### To Apply the Paper Process to Custom Data
 
 #### Data Preparation
-First, you need to set files `events.parquet`, `features.gpkg`, `mail_phone.parquet` `geom_sf_cities.gpkg` and `geom_sf_departements.gpkg`:
+First, you need to set files `events.parquet`, `features.gpkg`, `geom_sf_cities.gpkg` and `geom_sf_departements.gpkg`:
 
 * `events.parquet`: data set  (in parquet format) of listings view by online searchers. Each line is a combination of a user with a listing. This table contains colums : `fullvisitorid` (user ID); `id_listing` (listing ID); `datetime` (date and time of view);  `visitid` (view ID in the data set);  `is_logged` (indication of wether the user was logged while viewing the listing).
 * `features.gpkg`: data set (in gpkg format) of every single listings' features. This table contains colums : `id_listing` (listing ID); `price` (property price); `area` (property area); `room_count` (property room count); `fct_room_count` (property room count set to factor variable); `sqm_price` (property square meter price); `item_type` (property type, wether a house or appartment);
-* `mail_phone.parquet`: a data set (in parquet format) of contact indicators. Each line is a combination of a user with a listing. This table contains colums : `fullvisitorid` (user ID); `id_listing` (listing ID); `datetime` (date and time of view); `visitid` (view ID in the data set); `event_action` (indication of the contact action a user made : displaying a phone number or submiting a mail form); `is_logged` (indication of wether the user was logged while viewing the listing).
 * `geom_sf_cities.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing cities' limits. This table contains clomuns : `city_ID` (city ID), `dep_ID` (department ID), `reg_ID` (region ID),  `geom` (city geometry) 
 * `geom_sf_departements.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing departements' limits. This table contains clomuns :  `dep_ID` (department ID), `reg_ID` (region ID), `geom` (department geometry). 
 
 #### Processing
-  1. Copy your own `events.parquet`, `features.gpkg`, `geom_sf_cities.gpkg`, `geom_sf_departements.gpkg` and `mail_phone.parquet` in the `in` folder;
+  1. Copy your own `events.parquet`, `features.gpkg`, `geom_sf_cities.gpkg` and `geom_sf_departements.gpkg` in the `in` folder;
   2. Run the `main.R` script using `source("main.R")`. 
-
-### To Perform Only the Serious Search Identification
-These instructions are meant to perform a quick identification of serious search, without necessarily replicating all the experiments of the paper.
-The procedure is slightly different depending on whether contact data are available to the user. Contact data refers to phone number displaying as well as mail form submission (cf. the paper for more detail).
 
 ##### Data Preparation
 First, you need to set files `events.parquet`, `features.gpkg`, `mail_phone.parquet`, `geom_sf_cities.gpkg` and `geom_sf_departements.gpkg`:
   
 * `events.parquet`: data set  (in parquet format) of listings view by online searchers. Each line is a combination of a user with a listing. This table contains colums : `fullvisitorid` (user ID); `id_listing` (listing ID); `datetime` (date and time of view);  `visitid` (view ID in the data set); `is_logged` (indication of wether the user was logged while viewing the listing).
 * `features.gpkg`: data set (in gpkg format) of every single listings' features. This table contains colums : `id_listing` (listing ID); `price` (property price); `area` (property area); `room_count` (property room count); `fct_room_count` (property room count set to factor variable); `sqm_price` (property square meter price); `item_type` (property type, wether a house or appartment);
-* `mail_phone.parquet`: **only if the contact data are available.** This file contains contact indicators (in parquet format). Each line is a combination of a user with a listing. This table contains colums : `fullvisitorid` (user ID); `id_listing` (listing ID); `datetime` (date and time of view); `visitid` (view ID in the data set); `event_action` (indication of the contact action a user made : displaying a phone number or submiting a mail form); `is_logged` (indication of wether the user was logged while viewing the listing).
 * `geom_sf_cities.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing cities' limits. This table contains clomuns : `city_ID` (city ID), `dep_ID` (department ID), `reg_ID` (region ID),  `geom` (city geometry) 
 * `geom_sf_departements.gpkg`: a file (in [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) format) containing departements' limits. This table contains clomuns :  `dep_ID` (department ID), `reg_ID` (region ID), `geom` (department geometry).
 
 
 #### Processing
 1. Copy your own `events.parquet`, `features.gpkg`, `geom_sf_cities.gpkg`, `geom_sf_departements.gpkg`, and possibly `mail_phone.parquet` in the `in` folder;
-2.
-   -If contact indicators are available and want to incorporate them in the process, run the `serious_search_through_revisit_along_with_contact_indicators.R` script using `source("serious_search_through_revisit_along_with_contact_indicators.R")`.
-  - If contact indicators are not available, run the `serious_search_through_revisit_without_contact_indicators.R` script using `source("serious_search_through_revisit_without_contact_indicators.R")`.
-     
-#### Output
-The output of this processing is saved under `out/parquet/serious_search/serious_search_data.parquet` for [parquet](https://en.wikipedia.org/wiki/Apache_Parquet) format and `out/CSV/serious_search/serious_search_data.CSV` for [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) format. Serious search is identified through the column `is_serious`, which is a logical variable.
+2. Run the `main.R` script using `source("main.R")`. 
 
 ## Dependencies
 
