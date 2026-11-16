@@ -68,6 +68,7 @@ If you use this source code, please cite article:
   - `visualization`: folder containing `R` scripts for visualization parameters.
   - `function_retrieving.R`: `R` scripts to load function scripts.
   - `load_data.R`: `R` script to load data.
+  - `main_graph.R`: `R` script to install
   - `packages_loading.R`: `R` script to install (if not yet installed) and load the packages used in this work, along with customer functions.
   - `processing_functions.R`: `R` scripts for data processing ad hoc functions.
   - `main.R`: the main `R` scripts to run the full processings.
@@ -78,7 +79,7 @@ If you use this source code, please cite article:
 ## Installation
 
 ### R and Packages
-To run this program you need to install the `R` language environment and the required packages :
+To run this program you need to install the `R` language environment and the required packages:
 1. install the [`R` language](https://cran.r-project.org/)
 2. Download this project from GitHub and unzip or clone it.
 3. Run `packages_loading.R` to install the required packages (this step is included in `main.R`; a minimal Internet connection is needed).
