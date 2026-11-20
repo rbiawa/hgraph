@@ -1,5 +1,5 @@
-# hgraph v1.0.0 
-# =================== 
+hgraph v1.0.0 
+=================== 
 *Housing search as a graph* 
 
 *Serious Search Identification in User-generated data*
@@ -17,7 +17,7 @@ hgraph is free software: you can redistribute it and/or modify it under the term
 This repository contains the R code used to process the data, generate all results, and produce the figures presented in the document *'**Housing search as a graph: Using network science to delineate urban housing submarkets**'*.  
 A link to the document will be added if it is published.
 
-The scripts provide a complete workflow for graph extraction, analyses, and visualization.  
+The scripts provide a complete workflow for graph extraction, analysis, and visualization.  
 They can also be applied to custom data sets to delineate urban housing submarkets through user-generated data in online listing consultation.
 
 
@@ -310,9 +310,5 @@ URL: https://ec.europa.eu/eurostat/fr/web/nuts/principles
 * **[Ne'03]** **Newman, M. E. J.** (2003).
 *Mixing Patterns in Networks.* Physical Review E 67 (February): 026126. https://doi.org/10.1103/PhysRevE.67.026126.
 
-
 * **[Ba'04]** **Traag, V. A., L. Waltman, and N. J. Van Eck.** (2019).
 *From Louvain to Leiden: Guaranteeing Well-Connected Communities.* Scientific Reports 9 (1): 5233. https://doi.org/10.1038/s41598-019-41695-z.
-
-
-
